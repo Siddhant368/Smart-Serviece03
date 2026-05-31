@@ -1,0 +1,180 @@
+/* PAGE */
+.booking-page {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* LEFT PANEL */
+.left-panel {
+  flex: 1;
+  background: linear-gradient(135deg, #0f172a, #2563eb);
+  color: white;
+  padding: 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-panel h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.left-panel p {
+  color: #cbd5f5;
+  margin-bottom: 30px;
+}
+
+.features span {
+  display: block;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+}
+
+/* FORM */
+.form {
+  width: 420px;
+  padding: 40px;
+  border-radius: 25px;
+
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(25px);
+
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* TITLE */
+.form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* ROW (DATE TIME SIDE BY SIDE) */
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+/* FIELD */
+.field {
+  position: relative;
+  margin-bottom: 22px;
+  width: 100%;
+}
+
+/* INPUT */
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+
+  border: 1px solid #cbd5e1;
+  background: rgba(255,255,255,0.9);
+
+  font-size: 0.9rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* DATE TIME FIX */
+.field input[type="date"],
+.field input[type="time"] {
+  color: #334155;
+}
+
+/* ICON FIX */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+/* FOCUS */
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+/* TEXTAREA */
+textarea {
+  resize: none;
+  height: 90px;
+}
+
+/* LABEL */
+.field label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  transition: 0.3s;
+  font-size: 0.85rem;
+  pointer-events: none;
+  background: transparent;
+}
+
+/* FLOAT */
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label,
+.field textarea:focus + label,
+.field textarea:not(:placeholder-shown) + label,
+.field select:focus + label,
+.field select:valid + label {
+  top: -8px;
+  font-size: 0.7rem;
+  color: #2563eb;
+  background: white;
+  padding: 0 5px;
+}
+
+/* BUTTON */
+.btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  color: white;
+
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37,99,235,0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .booking-page {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    padding: 30px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}

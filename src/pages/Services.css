@@ -1,0 +1,127 @@
+/* PAGE */
+.services-page {
+  background: #0f172a; /* dark bg for glass effect */
+  min-height: 100vh;
+}
+
+/* HERO */
+.services-hero {
+  height: 50vh;
+  background: url("../assets/profile2.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+/* overlay */
+.services-hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+/* HERO TEXT */
+.hero-content {
+  position: relative;
+  color: white;
+  text-align: center;
+
+  /* glass effect */
+  background: rgba(255,255,255,0.1);
+  padding: 25px 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(20px);
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.hero-content p {
+  margin-top: 10px;
+  color: #e5e7eb;
+}
+
+/* SERVICES */
+.services-container {
+  padding: 40px;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 🔥 GLASS CARD (HOME STYLE) */
+.service-card {
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+
+  color: white;
+  transition: 0.4s;
+}
+
+/* hover */
+.service-card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+/* IMAGE */
+.service-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* TITLE */
+.service-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+/* DESC */
+.service-card p {
+  color: #d1d5db;
+  font-size: 0.95rem;
+}
+
+/* BUTTON */
+.service-card button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 8px;
+
+  background: linear-gradient(90deg, #2563eb, #38bdf8);
+  color: white;
+  border: none;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.service-card button:hover {
+  opacity: 0.9;
+}

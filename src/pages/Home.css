@@ -1,0 +1,97 @@
+/* Background + overlay */
+.home-container {
+  height: 100vh;
+  background: url("../assets/bg.png") no-repeat center/cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dark overlay */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+}
+
+/* Content center */
+.home-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+
+  /* Glass effect */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+
+  animation: fadeIn 1.5s ease;
+}
+
+/* Heading */
+.home-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Subtitle */
+.home-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #e5e7eb;
+}
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Primary button */
+.home-btn {
+  background: #2563eb;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.home-btn:hover {
+  background: #1d4ed8;
+  transform: scale(1.05);
+}
+
+/* Outline button */
+.home-btn-outline {
+  border: 2px solid white;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.home-btn-outline:hover {
+  background: white;
+  color: black;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

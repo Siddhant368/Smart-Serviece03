@@ -1,0 +1,111 @@
+/* PAGE */
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  font-family: sans-serif;
+}
+
+/* CARD */
+.login-card {
+  width: 350px;
+  padding: 35px;
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+
+  text-align: center;
+  color: white;
+}
+
+/* TITLE */
+.login-title {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.login-subtitle {
+  font-size: 0.9rem;
+  color: #cbd5f5;
+  margin-bottom: 20px;
+}
+
+/* INPUT GROUP */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+/* LABEL */
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #cbd5f5;
+  transition: 0.3s;
+  font-size: 0.9rem;
+}
+
+/* FLOAT EFFECT */
+.input-group input:focus + label,
+.input-group input:valid + label {
+  top: -8px;
+  font-size: 0.7rem;
+  color: #38bdf8;
+}
+
+/* TOGGLE */
+.toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* BUTTON */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+
+  background: linear-gradient(90deg, #2563eb, #38bdf8);
+  color: white;
+  border: none;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  opacity: 0.9;
+}
+
+/* EXTRA */
+.login-extra {
+  margin-top: 15px;
+  font-size: 0.85rem;
+}
+
+.login-extra a {
+  color: #38bdf8;
+  text-decoration: none;
+}

@@ -1,0 +1,105 @@
+.service-card {
+  width: 300px;
+  border-radius: 18px;
+  overflow: hidden;
+
+  background: #020617;
+  color: white;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* IMAGE */
+.service-img-box {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.service-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+/* ZOOM */
+.service-card:hover img {
+  transform: scale(1.1);
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.overlay span {
+  background: #38bdf8;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.service-card:hover .overlay {
+  opacity: 1;
+}
+
+/* CONTENT */
+.service-content {
+  padding: 15px;
+}
+
+.service-content h2 {
+  font-size: 1.2rem;
+}
+
+.service-content p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin: 8px 0;
+}
+
+/* BOTTOM */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* PRICE */
+.price {
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+/* BUTTON */
+.service-content button {
+  padding: 7px 12px;
+  border: none;
+  border-radius: 8px;
+
+  background: linear-gradient(90deg, #2563eb, #38bdf8);
+  color: white;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.service-content button:hover {
+  opacity: 0.85;
+}
